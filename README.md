@@ -25,75 +25,89 @@
 
 #### get
 ```html
-/states
+/:api_version/states
 ```
 * Request full list of states available
+* Example: `get '/v1/states'`
 
 #### post
 ```html
-/states
+/:api_version/states
 ```
 * Add a state by passing `params[:name]` in body or url.
+* Example: `post '/v1/states'`
 
 #### get
 ```html
-/states/:id
+/:api_version/states/:id
 ```
 * Show specific state and associated parks.
+* Example: `get '/v1/states/43'`
 
 #### patch
 ```html
-/states/:id
+/:api_version/states/:id
 ```
 * Edit specific state by passing `params[:name]` in body or url.
+* Example: `patch '/v1/states/43?name=Ohio'`
 
 #### delete
 ```html
-/states/:id
+/:api_version/states/:id
 ```
 * Destroy specific state from API.
+* Example: `delete 'v1/states/43'`
 
 #### get
 ```html
 /states/:id/parks
 ```
 * Show all parks associated with a specific park
+* Example: `get 'v1/states/43/parks'`
 
 #### get
 ```html
-/states/:state_id/parks/:id
+/:api_version/states/:state_id/parks/:id
 ```
-* Show a specific park associated with a specific state
+* Show a specific park associated with a specific state.
+* Example: `get 'v1/states/43/parks/12'`
+
 
 #### patch
 ```html
-/states/:state_id/parks/:id
+/:api_version/states/:state_id/parks/:id
 ```
-* Edit information for a specific park in relation to a specific state
+* Edit information for a specific park in relation to a specific state by passing in either, or all `params[:name, park_ranger, :open]`
+* Example: `patch '/v1/states/43/parks/12?name=Ohio&park_ranger=Jed&open=true'`
 
 #### delete
 ```html
-/states/:state_id/parks/:id
+/:api_version/states/:state_id/parks/:id
 ```
 * Destroy a specific park relating to a specific state
+* Example: `delete 'v1/states/43/parks/12'`
+
 
 #### get
 ```html
-/parks
+/:api_version/parks
 ```
 * Show all parks irrespective to their associated states
+* Example: `get '/v1/parks'`
 
 #### get
 ```html
-parks/search
+/:api_version/parks/search
 ```
 * Search for specific park(s) through name by passing in `params[:name]` in either the body or the URL.
+* Example: `get 'v1/parks/search?name=Nyx'`
 
 ### get
 ```html
 parks/random
 ```
 * Retrieve random park irrespective of state.
+* Example: `get 'v1/parks/random'`
 
 ## Known Bugs
 
