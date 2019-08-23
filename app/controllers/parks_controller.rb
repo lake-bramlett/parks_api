@@ -43,6 +43,11 @@ class ParksController < ApplicationController
     json_response(@park)
   end
 
+  def all
+    @parks = Park.all
+    json_response(@parks)
+  end
+
   private
   def json_response(object, status = :ok)
     render json: object, status: status
