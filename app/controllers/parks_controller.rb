@@ -38,6 +38,11 @@ class ParksController < ApplicationController
      }
   end
 
+  def random
+    @park = Park.random
+    json_response(@park)
+  end
+
   private
   def json_response(object, status = :ok)
     render json: object, status: status
