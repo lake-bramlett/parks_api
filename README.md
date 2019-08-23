@@ -1,5 +1,7 @@
 # _Parks API_
 
+## Current Version: 1.0
+
 #### _Code Review, 23 August 2019_
 
 #### By _**Lake Bramlett**_
@@ -15,6 +17,7 @@
 * _Initiate a `bundle install` in the command line_
 * _Create the database locally using `rails db:create` in the terminal_
 * _Run `rake db:migrate`_
+* _Ran `rake db:seed` to fill database with data._
 * _Create test databse by running `rake db:test:prepare` in terminal_
 * _To start local server run `rails s` in terminal window_
 * _Use Postman, or similar program, to make calls to localhost:3000 API_
