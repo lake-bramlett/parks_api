@@ -1,9 +1,9 @@
 require 'rails_helper'
 
 describe "get all states route", :type => :request do
+  State.delete_all
   let!(:states) { FactoryBot.create_list(:state, 20)}
-
-  before { get '/states'}
+  before { get '/v1/states'}
 
   it 'returns all states' do
     expect(JSON.parse(response.body).size).to eq(20)

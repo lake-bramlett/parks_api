@@ -25,9 +25,6 @@ class V1::StatesController < ApplicationController
   end
 
   private
-  def json_response(object, status = :ok)
-    render json: object, status: status
-  end
 
   def state_params
     params.permit(:name)
