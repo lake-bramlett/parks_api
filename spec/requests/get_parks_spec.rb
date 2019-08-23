@@ -1,7 +1,7 @@
 require 'rails_helper'
 
 describe "get state parks route", :type => :request do
-  let!(:state) { FactoryBot.create(:state)}
+  let!(:state) { FactoryBot.create_list(:state, 20)}
 
 
   before { get '/states/1/parks'}
