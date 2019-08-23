@@ -1,5 +1,5 @@
 Rails.application.routes.draw do
   resources :states do
-    reources :parks
+    resources :parks
   end
 end
