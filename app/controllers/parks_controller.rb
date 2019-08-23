@@ -48,6 +48,11 @@ class ParksController < ApplicationController
     json_response(@parks)
   end
 
+  def search
+    @parks = Park.search(params[:name])
+    json_response(@parks)
+  end
+
   private
   def json_response(object, status = :ok)
     render json: object, status: status
