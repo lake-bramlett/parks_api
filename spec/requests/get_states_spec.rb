@@ -1,6 +1,6 @@
 require 'rails_helper'
 
-describe "get all quotes route", :type => :request do
+describe "get all states route", :type => :request do
   let!(:states) { FactoryBot.create_list(:state, 20)}
 
   before { get '/states'}
