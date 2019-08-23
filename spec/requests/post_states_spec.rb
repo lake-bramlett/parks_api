@@ -10,7 +10,7 @@ describe "post a state route", :type => :request do
     expect(State.count).to eq(1)
   end
 
-  it 'returns a creates status' do
-    expect(response).to have_http_status(:created)
+  it 'returns a success status' do
+    expect(response).to have_http_status(:success)
   end
 end
