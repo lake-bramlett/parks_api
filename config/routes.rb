@@ -1,8 +1,14 @@
 Rails.application.routes.draw do
-  get "parks" => 'parks#all'
-  get "parks/search" => 'parks#search'
-  get "parks/random" => 'parks#random'
-  resources :states do
-    resources :parks
+  concern :api_base do
+    get "parks/search" => 'parks#search'
+    get "parks" => 'parks#all'
+    get "parks/random" => 'parks#random'
+    resources :states do
+      resources :parks
+    end
+  end
+
+  namespace :v1 do
+    concerns :api_base
   end
 end

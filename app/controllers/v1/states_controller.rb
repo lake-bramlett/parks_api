@@ -1,4 +1,4 @@
-class StatesController < ApplicationController
+class V1::StatesController < ApplicationController
   def index
     @states = State.all
     json_response(@states)
