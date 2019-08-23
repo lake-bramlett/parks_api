@@ -19,13 +19,13 @@ ActiveRecord::Schema.define(version: 2019_08_23_153901) do
     t.string "name"
     t.string "park_ranger"
     t.boolean "open"
-    t.bigint "park_id"
-    t.index ["park_id"], name: "index_parks_on_park_id"
+    t.bigint "state_id"
+    t.index ["state_id"], name: "index_parks_on_state_id"
   end
 
   create_table "states", force: :cascade do |t|
     t.string "name"
   end
 
-  add_foreign_key "parks", "parks"
+  add_foreign_key "parks", "states"
 end
