@@ -14,7 +14,7 @@ class V1::ParksController < ApplicationController
   def create
     @state = State.find(params[:state_id])
     @park = @state.parks.create!(park_params)
-    json_response(@park.as_json(include:[:nested_objects]))
+    json_response(@park)
     render status: 200, json: {
      message: "This park has been created."
      }
